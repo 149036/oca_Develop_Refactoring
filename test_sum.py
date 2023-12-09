@@ -6,4 +6,4 @@ def test_sum_no1():
     """
     1から10の和を計算する
     """
-    assert sum1() == sum2 == 55
+    assert sum1() == sum2() == 55
