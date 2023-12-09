@@ -16,10 +16,12 @@ def repeated_strings(strings: str, horizontal: int, vertical: int):
     Returns:
         str: result, 文字列を行と列に繰り返したもの
     """
+
     if not (5 <= len(strings) <= 10):
         # TODO: 一時的にprint
         # raise Exception("5文字以上10文字以下")
         print("5文字以上10文字以下")
+        return
 
     for char in strings:
         if not char.isalpha():
@@ -32,6 +34,7 @@ def repeated_strings(strings: str, horizontal: int, vertical: int):
 
     for i in range(vertical):
         result += strings + "\n"
+
     return result
 
 
