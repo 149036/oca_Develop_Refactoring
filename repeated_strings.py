@@ -23,23 +23,20 @@ def repeated_strings(strings: str, horizontal: int, vertical: int):
         print("5文字以上10文字以下")
         return
 
-    for char in strings:
-        if not char.isalpha():
-            raise Exception("アルファベットのみ")
+    if not strings.isalpha():
+        raise Exception("アルファベットのみ")
 
     result = ""
 
-    for i in range(horizontal):
+    for _ in range(horizontal):
         result += strings
 
-    for i in range(vertical):
+    for _ in range(vertical):
         result += strings + "\n"
 
     return result
 
 
 print(
-    repeated_strings(
-        "sdfasadf", numpy.random.randint(1, 10), numpy.random.randint(1, 10)
-    )
+    repeated_strings("sdfaaf", numpy.random.randint(1, 10), numpy.random.randint(1, 10))
 )
